@@ -8,6 +8,7 @@ export default function SearchBar({ value, onChange }) {
         value={value}
         onChange={e => onChange(e.target.value)}
       />
+      {value && <button onClick={() => onChange('')}>Clear</button>}
     </div>
   );
 }
