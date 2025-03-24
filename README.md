@@ -13,14 +13,14 @@ A small React project that fetches and displays random cat images and details. B
 
 - ⚛️ React + Vite
 - 🔄 useState, useEffect
-- 🌐 Fetch API (or Axios)
+- 🌐 Fetch API
 - 🎨 CSS for styling
 
 ## 🛠 Setup & Run
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cat-fetching-app.git
+   git clone https://github.com/tanichk4/cat-fetching-app.git
    cd cat-fetching-app
    ```
 # cat-explorer
