@@ -1,0 +1,72 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300..700&display=swap');
+
+:root {
+  --bg-color: #f3e1c6;
+  --primary: #d9a14f;
+  --secondary: #6b4a1f;
+  --tertiary: #007089;
+  --error: #e84840;
+  --text: #1a1311;
+
+  /* Spacing System */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* Font Sizes */
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 24px;
+  --font-xl: 30px;
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  max-width: 800px;
+  width: 100%;
+}
+
+/* LEFT SECTION */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* LOADER & ERROR MESSAGE */
+.loader,
+.error-message {
+  font-size: var(--font-md);
+  font-weight: bold;
+}
+
+.error-message {
+  color: var(--error);
+}
