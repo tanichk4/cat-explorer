@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useFetchCats } from './hooks/useFetchCats';
 
+import Header from './components/Header';
 import SearchBar from './components/SearchBar';
+import Loader from './components/Loader';
+import ErrorMessage from './components/ErrorMessage';
 import CatList from './components/CatList';
 import CatCard from './components/CatCard';
-import ErrorMessage from './components/ErrorMessage';
-import Loader from './components/Loader';
-import Header from './components/Header';
 
 function App() {
   const [catQuery, setCatQuery] = useState('');
@@ -23,22 +23,24 @@ function App() {
   }
 
   return (
-    <div className='app'>
+    <div className='container'>
       <Header />
-      <div className='search-section'>
-        <SearchBar value={catQuery} onChange={handleChangeQuery} />
-        {!catQuery && <p>Start typing to search</p>}
-        {!error && isLoading && <Loader />}
-        {error && !isLoading && <ErrorMessage error={error} />}
+      <div className='app'>
+        <div className='search-section'>
+          <SearchBar value={catQuery} onChange={handleChangeQuery} />
+          {!catQuery && <p>Start typing to search</p>}
+          {!error && isLoading && <Loader />}
+          {error && !isLoading && <ErrorMessage error={error} />}
 
-        {catQuery.length >= 2 && !isLoading && (
-          <CatList catData={cats} onCatClick={handleCatClick} />
-        )}
+          {catQuery.length >= 2 && !isLoading && (
+            <CatList catData={cats} onCatClick={handleCatClick} />
+          )}
+        </div>
+        <div className='result-section'>
+          {selectedCat && <CatCard cat={selectedCat} />}
+        </div>
       </div>
-      <div className='result-section'>
-        {selectedCat && <CatCard cat={selectedCat} />}
-      </div>
-      <a href='https://github.com/tanichk4'>by tanichk4 &copy;</a>
+      <a href='https://github.com/tanichk4'>&copy; by tanichk4</a>
     </div>
   );
 }
