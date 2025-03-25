@@ -107,7 +107,7 @@ body {
   .app {
     grid-template-columns: 350px 1fr;
     grid-template-rows: 1fr;
-    height: 50vh;
+    height: 75vh;
     max-height: 600px;
   }
 
@@ -123,5 +123,9 @@ body {
 @media (max-width: 767px) {
   .app {
     height: 70vh;
+  }
+
+  .container {
+    gap: var(--space-lg);
   }
 }
