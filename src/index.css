@@ -52,7 +52,7 @@ body {
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 
 .app {
@@ -92,6 +92,7 @@ body {
   gap: var(--space-md);
   border-radius: var(--space-md);
   padding: var(--space-md);
+  text-align: center;
 }
 
 .result-section {
@@ -104,7 +105,8 @@ body {
   .app {
     grid-template-columns: 350px 1fr;
     grid-template-rows: 1fr;
-    height: 60vh;
+    height: 50vh;
+    max-height: 600px;
   }
 
   .search-section {
@@ -113,5 +115,11 @@ body {
 
   .result-section {
     grid-column: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .app {
+    height: 70vh;
   }
 }

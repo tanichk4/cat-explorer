@@ -13,8 +13,8 @@ function App() {
   const { cats, isLoading, error } = useFetchCats(catQuery);
   const [selectedCat, setSelectedCat] = useState(null);
 
-  function handleChangeQuery(e) {
-    setCatQuery(e);
+  function handleChangeQuery(value) {
+    setCatQuery(value.trim());
     setSelectedCat(null);
   }
 
