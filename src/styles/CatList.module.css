@@ -11,9 +11,18 @@
   padding: var(--space-sm);
   border-radius: 8px;
   transition: background 0.2s ease;
+  border: 2px solid var(--secondary);
 }
 
 .catitem:hover {
   background-color: var(--primary);
   color: white;
+}
+
+@media (min-width: 600px) {
+  .catlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+  }
 }

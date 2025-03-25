@@ -1,4 +1,7 @@
 .header {
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   font-weight: 700;
+  align-self: center;
+  margin: 0;
+  text-align: center;
 }

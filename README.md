@@ -1,26 +1,24 @@
-# 🐱 Cat Fetching App
+# 🐱 Cat Explorer App
 
-A small React project that fetches and displays random cat images and details. Built with React and Vite to practice **data fetching, state management, and hooks**.
+A sleek React app that fetches and displays detailed information about various cat breeds. Built with **React** and **Vite**, this project is designed to practice **data fetching, state management, and hooks**.
+
+## 🌐 Live Demo
+
+Check out the live version of the app hosted on GitHub Pages:  
+[**Cat Explorer**](https://tanichk4.github.io/cat-explorer-app)
 
 ## 🚀 Features
 
-- ✅ Fetches a random cat from an API
-- ✅ Displays the cat’s image, breed, and temperament
-- ✅ Button to fetch a new random cat
-- ✅ Loading state while fetching data
+- ✅ Fetches cat details from an API
+- ✅ Displays the cat’s name, image, grooming level, and child-friendliness
+- ✅ Interactive hover effect to reveal more details
+- ✅ Smooth animations for a polished user experience
 
 ## 📦 Technologies Used
 
 - ⚛️ React + Vite
-- 🔄 useState, useEffect
+- 🔄 useState, useEffect, useRef
 - 🌐 Fetch API
-- 🎨 CSS for styling
+- 🎨 CSS for styling and animations
 
-## 🛠 Setup & Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/tanichk4/cat-fetching-app.git
-   cd cat-fetching-app
-   ```
-# cat-explorer
+# cat-explorer-app

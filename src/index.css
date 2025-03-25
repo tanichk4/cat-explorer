@@ -1,9 +1,8 @@
-/*
-SPACING SYSTEM (px)
+/* SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
 
 FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300..700&display=swap');
@@ -17,27 +16,29 @@ FONT SIZE SYSTEM (px)
   --text: #1a1311;
 
   /* Spacing System */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 40px;
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2.5rem; /* 40px */
 
   /* Font Sizes */
-  --font-sm: 14px;
-  --font-md: 16px;
-  --font-lg: 24px;
-  --font-xl: 30px;
+  --font-sm: 0.875rem; /* 14px */
+  --font-md: 1rem; /* 16px */
+  --font-lg: 1.5rem; /* 24px */
+  --font-xl: 1.875rem; /* 30px */
 }
 
 * {
   font-family: 'Nunito', sans-serif;
   color: var(--text);
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--bg-color);
   display: flex;
   align-items: center;
@@ -46,27 +47,65 @@ body {
 }
 
 .app {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  gap: var(--space-lg);
+  width: 90vw;
+  height: 80vh;
   max-width: 800px;
-  width: 100%;
+  min-height: 70vh;
+  border-radius: var(--space-md);
+  align-items: start;
+  background-color: white;
+  padding: var(--space-lg);
+  overflow: scroll;
 }
 
-/* LEFT SECTION */
+.app a {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header {
+  grid-column: 1;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
 .search-section {
+  grid-column: 1;
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  border-radius: var(--space-md);
+  padding: var(--space-md);
 }
 
-/* LOADER & ERROR MESSAGE */
-.loader,
-.error-message {
-  font-size: var(--font-md);
-  font-weight: bold;
+.result-section {
+  grid-column: 1;
+  border-radius: var(--space-md);
+  padding: var(--space-md);
 }
 
-.error-message {
-  color: var(--error);
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: 350px 400px;
+    grid-template-rows: auto 1fr;
+  }
+
+  header {
+    grid-column: span 2;
+  }
+
+  .search-section {
+    grid-column: 1;
+  }
+
+  .result-section {
+    grid-column: 2;
+  }
 }

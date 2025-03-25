@@ -15,6 +15,7 @@ function App() {
 
   function handleChangeQuery(e) {
     setCatQuery(e);
+    setSelectedCat(null);
   }
 
   function handleCatClick(cat) {
@@ -23,8 +24,8 @@ function App() {
 
   return (
     <div className='app'>
+      <Header />
       <div className='search-section'>
-        <Header />
         <SearchBar value={catQuery} onChange={handleChangeQuery} />
         {!catQuery && <p>Start typing to search</p>}
         {!error && isLoading && <Loader />}
@@ -34,9 +35,10 @@ function App() {
           <CatList catData={cats} onCatClick={handleCatClick} />
         )}
       </div>
-      <div className='right'>
+      <div className='result-section'>
         {selectedCat && <CatCard cat={selectedCat} />}
       </div>
+      <a href='https://github.com/tanichk4'>by tanichk4 &copy;</a>
     </div>
   );
 }

@@ -35,6 +35,7 @@ export function useFetchCats(query) {
 
           if (data.length === 0) throw new Error('No cats found 🐾');
 
+          console.log(data);
           setCats(data);
         } catch (err) {
           if (err.name !== 'AbortError') setError(err.message);

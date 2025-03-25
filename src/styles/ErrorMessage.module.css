@@ -1,0 +1,6 @@
+.errorMessage {
+  font-size: var(--font-md);
+  font-weight: bold;
+  min-height: 24px;
+  color: var(--error);
+}
